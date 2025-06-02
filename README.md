@@ -46,5 +46,3 @@ The essay provides a detailed introduction to RJMCMC, including its algorithm, a
   - Posterior probabilities approximated via RJMCMC iterations:
     $$ P(\text{Model 0} \mid X) \approx \frac{N_0}{N}, $$
     $$ P(\text{Model 1} \mid X) \approx \frac{N_1}{N}. $$
-
-## Repository Structure
