@@ -1,7 +1,7 @@
 # Reversible Jump MCMC (RJMCMC) Essay
 
 ## Overview
-This repository contains a 10-page essay titled *"Monte Carlo Simulation"* by Xiaolong Wang from the Department of Statistics, University of Chicago. The essay explores the Reversible Jump Markov Chain Monte Carlo (RJMCMC) method, an extension of traditional MCMC techniques for Bayesian inference across models with varying dimensions. RJMCMC enables trans-dimensional sampling, making it ideal for Bayesian model selection and variable selection tasks.
+The essay explores the Reversible Jump Markov Chain Monte Carlo (RJMCMC) method, an extension of traditional MCMC techniques for Bayesian inference across models with varying dimensions. RJMCMC enables trans-dimensional sampling, making it ideal for Bayesian model selection and variable selection tasks.
 
 The essay provides a detailed introduction to RJMCMC, including its algorithm, applications in Bayesian linear regression, and a Poisson vs. Negative Binomial model selection example. It also includes simulation results and a discussion of implementation challenges and recent advancements.
 
