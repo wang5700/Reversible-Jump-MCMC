@@ -13,9 +13,11 @@ The essay provides a detailed introduction to RJMCMC, including its algorithm, a
 - **Section 2: Variable Selection using RJMCMC**
   - Applies RJMCMC to Bayesian Linear Regression for variable selection.
   - Models considered:
-    - Model 0: \( Y_i = \beta_0 + \beta_1 X_{1i} + \epsilon_i \)
-    - Model 1: \( Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{1i}^2 + \epsilon_i \)
-  - Details within-model (Metropolis-Hastings) and between-model moves.
+    - Model 0:
+      $$ Y_i = \beta_0 + \beta_1 X_{1i} + \epsilon_i $$
+    - Model 1:
+      $$ Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{1i}^2 + \epsilon_i $$
+  - Details within-model (Metropolis-Hastings) and betweenheromodel moves.
   - Simulation results include trace plots and histograms for \(\beta_0\), \(\beta_1\), and \(\beta_2\), showing convergence and posterior distribution estimates.
 
 - **Section 3: Bayesian Model Selection**
@@ -30,14 +32,19 @@ The essay provides a detailed introduction to RJMCMC, including its algorithm, a
 
 ## Key Details
 - **Simulation Setup (Section 2.5)**:
-  - True data-generating process: \( Y_i = 1 + 2X_{1i} + 0.5X_{1i}^2 + \epsilon_i \), where \(\epsilon_i \sim N(0, 0.5)\).
+  - True data-generating process:
+    $$ Y_i = 1 + 2X_{1i} + 0.5X_{1i}^2 + \epsilon_i, $$
+    where \(\epsilon_i \sim N(0, 0.5)\).
   - Prior parameters: \(\sigma_\beta^2 = 10\), \(\sigma_u^2 = 1\), \(\tau^2 = 0.05\).
-  - Transition probabilities: \( h = \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix} \).
+  - Transition probabilities:
+    $$ h = \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix} $$
   - Prior beliefs: \( P(M=0) = P(M=1) = 0.5 \).
 
 - **Bayesian Model Selection (Section 3)**:
   - Compares Poisson (Model 0) and Negative Binomial (Model 1) distributions.
   - Reparameterization: \(\lambda = r(1-p)/p\) for Negative Binomial.
-  - Posterior probabilities approximated via RJMCMC iterations: \( P(\text{Model 0} \mid X) \approx N_0/N \), \( P(\text{Model 1} \mid X) \approx N_1/N \).
+  - Posterior probabilities approximated via RJMCMC iterations:
+    $$ P(\text{Model 0} \mid X) \approx \frac{N_0}{N}, $$
+    $$ P(\text{Model 1} \mid X) \approx \frac{N_1}{N}. $$
 
 ## Repository Structure
